@@ -1,44 +1,49 @@
-# 日本語感情分析アプリ（portfolio-app-github）
+# Japanese Sentiment Analysis App (portfolio-app-github)
 
-Python（Streamlit）で作成した、日本語ツイートの感情を分析するWebアプリです。
+This is a web application for analyzing the sentiment of Japanese tweets, built with Python and Streamlit.
+
+For Japanese, see [README_ja.md](./README_ja.md)
+
+## Features
+
+- Automatically classifies Japanese text as **Positive** or **Negative** using AI
+- Supports batch analysis by uploading a CSV file
+- Visualizes results with bar charts and time-series graphs
+- Allows downloading analysis results as a CSV file
 
 
-
-## 機能紹介
-
-- 日本語のテキストを入力すると、感情（ポジティブ・ネガティブ）を自動判定
-- CSVファイルをアップロードし、複数データを一括分析可能
-- 感情の分析結果をグラフ（棒グラフ・時系列グラフ）で表示可能
-- 分析結果をCSV形式でダウンロード可能
-
-
-
-## 使用している技術・ライブラリ
+## Technologies Used
 
 - Python 3
-- Streamlit（Webアプリ作成）
-- Hugging Face Transformers（感情分析モデル）
-- Altair（データ可視化）
-- Pandas（データ操作）
+- Streamlit (Web app framework)
+- Hugging Face Transformers (Sentiment analysis model)
+- Altair (Data visualization)
+- Pandas (Data processing)
 
 
+## Installation & Usage
 
-## インストール方法・使い方
-
-### 1. 必要なライブラリをインストール
+### 1. Install required libraries
 
 `pip install -r requirements.txt`
 
-### 2. アプリを実行
+### 2.Run the app
 
 `streamlit run simple_app_github.py`
 
-### 3. ブラウザで表示
+### 3. Open the app in your browser
+Click the URL shown in your terminal (for example: http://localhost:8501).
 
-ターミナルに表示されたURL（例: http://localhost:8501）をクリック
+## Notes
+- The sentiment analysis model (jarvisx17/japanese-sentiment-analysis) supports only two classes: Positive and Negative.
+- No API keys or personal information are included in this repository.
+- If you upload a CSV file, please ensure that the contents consist of simple sentences.
 
-## 注意点
-
-- 本アプリで使用している感情分析モデル（jarvisx17/japanese-sentiment-analysis）は、ポジティブ・ネガティブの2種類の分類です。
-- APIキーや個人情報は含まれていません。
-
+```markdown
+| Japanese                       | English translation                        |
+| ------------------------------ | ------------------------------------------ |
+| 今日は最高に楽しかった！            | I had an amazing time today!               |
+| 明日は仕事で憂鬱…                  | I feel down because I have to work tomorrow... |
+| なんだか気分が乗らない             | I just can’t get in the mood.              |
+| カフェでまったりしてリフレッシュ！ | I relaxed at a café and refreshed myself!  |
+| 寝坊して最悪な気分だ               | I overslept and feel terrible.             |
